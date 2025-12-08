@@ -10,8 +10,8 @@ function ToastButton() {
   function createToast() {
     setCount((prev) => prev + 1);
     toastManager.add({
-      title: `توست ${count + 1} ساخته شد`,
-      description: 'متن توضیحات تستی برای توست',
+      data: { status: "error" },
+      description: `توست ${count + 1} ساخته شد`,
     });
   }
 

@@ -3,6 +3,7 @@
 @import "./../styles/button.css";
 @import "./../styles/avatar.css";
 @import "./../styles/separator.css";
+@import "./../styles/toast.css";
 
 @theme {
   --color-*: initial;
