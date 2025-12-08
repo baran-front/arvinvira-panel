@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./../styles/layout.css";
 @import "./../styles/button.css";
+@import "./../styles/avatar.css";
 @import "./../styles/separator.css";
 
 @theme {
@@ -25,6 +26,8 @@
 
   --color-palette: var(--color-foreground);
   --color-brush: var(--color-background);
+
+  --radius-lg: calc(var(--spacing) * 4);
 }
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
