@@ -25,7 +25,7 @@ export default function RootLayout({
           </div>
 
           <Toast.Portal>
-            <Toast.Viewport className={"fixed w-96 bottom-3 left-3 top-auto"}>
+            <Toast.Viewport className={"fixed w-96 bottom-3 left-1/2 -translate-x-1/2 top-auto"}>
               <ToastList />
             </Toast.Viewport>
           </Toast.Portal>
