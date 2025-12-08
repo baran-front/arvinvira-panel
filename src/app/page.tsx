@@ -1,3 +1,4 @@
+import ToastButton from "@/components/modules/toastButton/toastButton"
 import { Button } from "@base-ui-components/react"
 
 function Page() {
@@ -157,6 +158,11 @@ function Page() {
           <div className="avatar avatar-xxxs bg-background-thick" />
           <div className="avatar avatar-xxxs bg-background-thick avatar-circle" />
         </div>
+      </div>
+
+      <div className="p-3">
+        <p className="text-5xl font-bold">توست ها:</p>
+        <ToastButton />
       </div>
     </>
   )
