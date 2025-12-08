@@ -1,1 +1,123 @@
 @import "tailwindcss";
+@import "./../styles/layout.css";
+@import "./../styles/button.css";
+@import "./../styles/separator.css";
+
+@theme {
+  --color-*: initial;
+  --color-background: #f1f1f1;
+  --color-background-thin: #ffffff;
+  --color-background-thick: #dddddd;
+  --color-foreground: #141414;
+  --color-foreground-mute: #646464;
+  --color-primary: #0f9087;
+  --color-primary-foreground: #e7f4f3;
+  --color-secondary: #ffa33a;
+  --color-secondary-foreground: #fff6ec;
+  --color-danger: #ff4747;
+  --color-danger-foreground: #ffeded;
+  --color-warning: #ffb133;
+  --color-warning-foreground: #fcf5e8;
+  --color-success: #119200;
+  --color-success-foreground: #e7f4e6;
+  --color-info: #3d7bff;
+  --color-info-foreground: #e9effc;
+
+  --color-palette: var(--color-foreground);
+  --color-brush: var(--color-background);
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+[data-theme="dark"] {
+  --color-background: #f1f1f1;
+  --color-background-thin: #ffffff;
+  --color-background-thick: #dddddd;
+  --color-foreground: #141414;
+  --color-foreground-mute: #646464;
+  --color-primary: #0f9087;
+  --color-primary-foreground: #e7f4f3;
+  --color-secondary: #ffa33a;
+  --color-secondary-foreground: #fff6ec;
+  --color-danger: #ff4747;
+  --color-danger-foreground: #ffeded;
+  --color-warning: #ffb133;
+  --color-warning-foreground: #fcf5e8;
+  --color-success: #119200;
+  --color-success-foreground: #e7f4e6;
+  --color-info: #3d7bff;
+  --color-info-foreground: #e9effc;
+}
+
+@utility palette-foreground {
+  --color-palette: var(--color-foreground);
+  --color-brush: var(--color-background);
+}
+@utility palette-background {
+  --color-palette: var(--color-background);
+  --color-brush: var(--color-foreground);
+}
+@utility palette-primary {
+  --color-palette: var(--color-primary);
+  --color-brush: var(--color-primary-foreground);
+}
+@utility palette-secondary {
+  --color-palette: var(--color-secondary);
+  --color-brush: var(--color-secondary-foreground);
+}
+@utility palette-danger {
+  --color-palette: var(--color-danger);
+  --color-brush: var(--color-danger-foreground);
+}
+@utility palette-warning {
+  --color-palette: var(--color-warning);
+  --color-brush: var(--color-warning-foreground);
+}
+@utility palette-success {
+  --color-palette: var(--color-success);
+  --color-brush: var(--color-success-foreground);
+}
+@utility palette-info {
+  --color-palette: var(--color-info);
+  --color-brush: var(--color-info-foreground);
+}
+
+@layer base {
+  body {
+    position: relative;
+  }
+
+  .root {
+    isolation: isolate;
+  }
+
+  html {
+    @apply scroll-smooth bg-background text-foreground;
+  }
+
+  * {
+    @apply select-none;
+
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--color-foreground)) transparent;
+  }
+
+  a,
+  span,
+  label {
+    @apply inline-block;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  input:focus,
+  textarea:focus {
+    @apply outline-none;
+  }
+
+  textarea {
+    @apply resize-none;
+  }
+}
