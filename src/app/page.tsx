@@ -1,5 +1,6 @@
 import ToastButton from "@/components/modules/toastButton/toastButton"
-import { Button } from "@base-ui-components/react"
+import { Button, Checkbox } from "@base-ui-components/react"
+import { CheckIcon } from "lucide-react"
 
 function Page() {
   return (
@@ -163,6 +164,20 @@ function Page() {
       <div className="p-3">
         <p className="text-5xl font-bold">توست ها:</p>
         <ToastButton />
+      </div>
+
+      <div className="p-3">
+        <p className="text-5xl font-bold">چک باکس:</p>
+        <label className={"f-align gap-3 mt-6"}>
+          <span>
+            فعالسازی نوتیفیکیشن ها
+          </span>
+          <Checkbox.Root defaultChecked aria-label="Enable notifications" className={"checkbox"}>
+            <Checkbox.Indicator className={"checkbox-indicator"}>
+              <CheckIcon />
+            </Checkbox.Indicator>
+          </Checkbox.Root>
+        </label>
       </div>
     </>
   )
