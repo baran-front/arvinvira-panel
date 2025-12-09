@@ -1,9 +1,10 @@
 "use client";
 
 import ToastButton from "@/components/modules/toastButton/toastButton"
+import { Otp } from "@/components/ui/otp/otp";
 import { Rating } from "@/components/ui/rating/rating"
 import { AlertDialog, Button, Checkbox, Dialog, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
-import { CheckIcon, StarIcon, XIcon } from "lucide-react"
+import { CheckIcon, StarIcon, UserIcon, XIcon } from "lucide-react"
 import { useState } from "react";
 
 function Page() {
@@ -341,6 +342,30 @@ function Page() {
             </Dialog.Popup>
           </Dialog.Portal>
         </Dialog.Root>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">اینپوت:</p>
+
+        <label className="input input-outline mt-6 max-w-96 input-rounded" htmlFor="input-1">
+          <UserIcon className="input-icon-size" />
+          <input className="input-field" id="input-1" type="text" />
+        </label>
+
+        <label className="input input-soft mt-6 max-w-96 input-rounded palette-primary" htmlFor="input-2">
+          <UserIcon className="input-icon-size" />
+          <input className="input-field" id="input-2" type="text" />
+        </label>
+
+        <Otp className="otp mt-6" dir="ltr">
+          <Otp.Inputs
+            length={6}
+            className="input input-outline input-square"
+            onLastChange={(otp) => alert(otp)}
+          />
+
+          <Otp.HiddenInput />
+        </Otp>
       </div>
     </>
   )
