@@ -3,8 +3,9 @@
 import ToastButton from "@/components/modules/toastButton/toastButton"
 import { Otp } from "@/components/ui/otp/otp";
 import { Rating } from "@/components/ui/rating/rating"
+import { Upload } from "@/components/ui/upload/upload";
 import { AlertDialog, Button, Checkbox, Dialog, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
-import { CheckIcon, StarIcon, UserIcon, XIcon } from "lucide-react"
+import { CheckIcon, PlusIcon, StarIcon, UserIcon, XIcon } from "lucide-react"
 import { useState } from "react";
 
 function Page() {
@@ -366,6 +367,19 @@ function Page() {
 
           <Otp.HiddenInput />
         </Otp>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">آپلودر:</p>
+        <Upload className="bg-background-thick f-center flex-col gap-3 p-6 rounded-lg max-w-96 mt-6">
+          <div className="size-12 border-2 border-dashed border-foreground-mute f-center rounded-lg">
+            <PlusIcon className="size-7" />
+          </div>
+          <p>برای آپلود <span className="text-info">کلیک</span> کنید</p>
+          <p className="text-warning">حجم فایل بیش از 2 مگ نباشد</p>
+
+          <Upload.Input />
+        </Upload>
       </div>
     </>
   )
