@@ -1,5 +1,5 @@
 import ToastButton from "@/components/modules/toastButton/toastButton"
-import { Button, Checkbox } from "@base-ui-components/react"
+import { Button, Checkbox, Radio, RadioGroup } from "@base-ui-components/react"
 import { CheckIcon } from "lucide-react"
 
 function Page() {
@@ -125,7 +125,7 @@ function Page() {
         </div>
       </div>
 
-      <div className="p-3">
+      <div className="p-3 mt-9">
         <p className="text-5xl font-bold">آواتار ها:</p>
         <div className="f-align gap-3 mt-6">
           <div className="avatar avatar-xxl bg-background-thick" />
@@ -161,12 +161,12 @@ function Page() {
         </div>
       </div>
 
-      <div className="p-3">
+      <div className="p-3 mt-9">
         <p className="text-5xl font-bold">توست ها:</p>
         <ToastButton />
       </div>
 
-      <div className="p-3">
+      <div className="p-3 mt-9">
         <p className="text-5xl font-bold">چک باکس:</p>
         <label className={"f-align gap-3 mt-6"}>
           <span>
@@ -178,6 +178,36 @@ function Page() {
             </Checkbox.Indicator>
           </Checkbox.Root>
         </label>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">رادیو:</p>
+        <RadioGroup aria-labelledby={"radio"} defaultValue="system" className={"radio-group mt-6"}>
+          <p id={"radio"}>
+            تم وب سایت:
+          </p>
+
+          <label className={"radio-label"}>
+            <Radio.Root value="dark" className={"radio"}>
+              <Radio.Indicator className={"radio-indicator"} />
+            </Radio.Root>
+            دارک
+          </label>
+
+          <label className={"radio-label"}>
+            <Radio.Root value="light" className={"radio"}>
+              <Radio.Indicator className={"radio-indicator"} />
+            </Radio.Root>
+            لایت
+          </label>
+
+          <label className={"radio-label"}>
+            <Radio.Root value="system" className={"radio"}>
+              <Radio.Indicator className={"radio-indicator"} />
+            </Radio.Root>
+            سیستم
+          </label>
+        </RadioGroup>
       </div>
     </>
   )
