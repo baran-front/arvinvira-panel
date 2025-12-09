@@ -4,9 +4,10 @@ import ToastButton from "@/components/modules/toastButton/toastButton"
 import MenuArrowSvg, { MENU_POSITIONER_SIDE_OFFSET } from "@/components/ui/menu/menuSetting";
 import { Otp } from "@/components/ui/otp/otp";
 import { Rating } from "@/components/ui/rating/rating"
+import TooltipArrowSvg from "@/components/ui/tooptip/tooltip";
 import { Upload } from "@/components/ui/upload/upload";
-import { AlertDialog, Button, Checkbox, Dialog, Menu, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
-import { ArrowUpIcon, CheckIcon, ChevronDownIcon, PlusIcon, StarIcon, UserIcon, XIcon } from "lucide-react"
+import { AlertDialog, Button, Checkbox, Dialog, Menu, Radio, RadioGroup, Tabs, Tooltip } from "@base-ui-components/react"
+import { CheckIcon, ChevronDownIcon, PlusIcon, StarIcon, UserIcon, XIcon } from "lucide-react"
 import { useState } from "react";
 
 function Page() {
@@ -420,6 +421,68 @@ function Page() {
             </Menu.Positioner>
           </Menu.Portal>
         </Menu.Root>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">تولتیپ:</p>
+
+        <Tooltip.Provider>
+          <div className="f-align gap-3 mt-6">
+            <Tooltip.Root>
+              <Tooltip.Trigger className="btn btn-soft btn-square palette-primary">
+                B
+              </Tooltip.Trigger>
+              <Tooltip.Portal>
+                <Tooltip.Positioner sideOffset={10}>
+                  <Tooltip.Popup className="tooltip-popup palette-primary">
+                    <Tooltip.Arrow
+                      className="tooltip-arrow"
+                    >
+                      <TooltipArrowSvg />
+                    </Tooltip.Arrow>
+                    Bold
+                  </Tooltip.Popup>
+                </Tooltip.Positioner>
+              </Tooltip.Portal>
+            </Tooltip.Root>
+
+            <Tooltip.Root>
+              <Tooltip.Trigger className="btn btn-soft btn-square palette-primary">
+                I
+              </Tooltip.Trigger>
+              <Tooltip.Portal>
+                <Tooltip.Positioner sideOffset={10}>
+                  <Tooltip.Popup className="tooltip-popup palette-primary">
+                    <Tooltip.Arrow
+                      className="tooltip-arrow"
+                    >
+                      <TooltipArrowSvg />
+                    </Tooltip.Arrow>
+                    Italic
+                  </Tooltip.Popup>
+                </Tooltip.Positioner>
+              </Tooltip.Portal>
+            </Tooltip.Root>
+
+            <Tooltip.Root>
+              <Tooltip.Trigger className="btn btn-soft btn-square palette-primary">
+                U
+              </Tooltip.Trigger>
+              <Tooltip.Portal>
+                <Tooltip.Positioner sideOffset={10}>
+                  <Tooltip.Popup className="tooltip-popup palette-primary">
+                    <Tooltip.Arrow
+                      className="tooltip-arrow"
+                    >
+                      <TooltipArrowSvg />
+                    </Tooltip.Arrow>
+                    Underline
+                  </Tooltip.Popup>
+                </Tooltip.Positioner>
+              </Tooltip.Portal>
+            </Tooltip.Root>
+          </div>
+        </Tooltip.Provider>
       </div>
 
       <p className="p-3 my-20">
