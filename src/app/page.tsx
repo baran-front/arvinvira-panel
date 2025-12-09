@@ -209,6 +209,19 @@ function Page() {
           </label>
         </RadioGroup>
       </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">بج:</p>
+        <span className="badge badge-outline mt-6">لورم ایپسوم</span>
+        <div className="bg-foreground palette-background p-3 w-fix mt-3">
+          <span className="badge badge-outline">لورم ایپسوم</span>
+        </div>
+        <span className="badge badge-outline mt-3 palette-primary">لورم ایپسوم</span>
+        <span className="badge badge-outline mt-3 palette-secondary">لورم ایپسوم</span>
+        <span className="badge badge-outline mt-3 palette-danger">لورم ایپسوم</span>
+        <span className="badge badge-outline mt-3 palette-warning">لورم ایپسوم</span>
+        <span className="badge badge-outline mt-3 palette-info">لورم ایپسوم</span>
+      </div>
     </>
   )
 }
