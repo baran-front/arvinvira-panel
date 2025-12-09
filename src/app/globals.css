@@ -5,6 +5,7 @@
 @import "./../styles/otp.css";
 @import "./../styles/badge.css";
 @import "./../styles/checkbox.css";
+@import "./../styles/switch.css";
 @import "./../styles/radio.css";
 @import "./../styles/tabs.css";
 @import "./../styles/rating.css";
@@ -18,7 +19,7 @@
 @theme {
   --color-background: #f1f1f1;
   --color-background-thin: #ffffff;
-  --color-background-thick: #e3e3e3;
+  --color-background-thick: #dddddd;
   --color-foreground: #141414;
   --color-foreground-mute: #646464;
   --color-primary: #0f9087;

@@ -6,7 +6,7 @@ import { Otp } from "@/components/ui/otp/otp";
 import { Rating } from "@/components/ui/rating/rating"
 import TooltipArrowSvg from "@/components/ui/tooptip/tooltip";
 import { Upload } from "@/components/ui/upload/upload";
-import { AlertDialog, Button, Checkbox, Dialog, Menu, Radio, RadioGroup, Tabs, Tooltip } from "@base-ui-components/react"
+import { AlertDialog, Button, Checkbox, Dialog, Menu, Radio, RadioGroup, Switch, Tabs, Tooltip } from "@base-ui-components/react"
 import { CheckIcon, ChevronDownIcon, PlusIcon, StarIcon, UserIcon, XIcon } from "lucide-react"
 import { useState } from "react";
 
@@ -483,6 +483,16 @@ function Page() {
             </Tooltip.Root>
           </div>
         </Tooltip.Provider>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">سوییچ:</p>
+
+        <Switch.Root
+          className="switch mt-6 palette-info"
+        >
+          <Switch.Thumb className="switch-thumb" />
+        </Switch.Root>
       </div>
 
       <p className="p-3 my-20">
