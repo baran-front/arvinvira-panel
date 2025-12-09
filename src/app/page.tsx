@@ -1,11 +1,12 @@
 "use client";
 
 import ToastButton from "@/components/modules/toastButton/toastButton"
+import MenuArrowSvg, { MENU_POSITIONER_SIDE_OFFSET } from "@/components/ui/menu/menuSetting";
 import { Otp } from "@/components/ui/otp/otp";
 import { Rating } from "@/components/ui/rating/rating"
 import { Upload } from "@/components/ui/upload/upload";
-import { AlertDialog, Button, Checkbox, Dialog, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
-import { CheckIcon, PlusIcon, StarIcon, UserIcon, XIcon } from "lucide-react"
+import { AlertDialog, Button, Checkbox, Dialog, Menu, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
+import { ArrowUpIcon, CheckIcon, ChevronDownIcon, PlusIcon, StarIcon, UserIcon, XIcon } from "lucide-react"
 import { useState } from "react";
 
 function Page() {
@@ -381,6 +382,49 @@ function Page() {
           <Upload.Input />
         </Upload>
       </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">آپلودر:</p>
+
+        <Menu.Root>
+          <Menu.Trigger className="btn btn-fill mt-6">
+            دسته بندی <ChevronDownIcon className="btn-icon-size" />
+          </Menu.Trigger>
+          <Menu.Portal>
+            <Menu.Positioner sideOffset={MENU_POSITIONER_SIDE_OFFSET}>
+              <Menu.Popup className="menu-popup">
+                <Menu.Arrow className="menu-arrow">
+                  <MenuArrowSvg />
+                </Menu.Arrow>
+                <Menu.Item className="menu-item">
+                  Add to Library
+                </Menu.Item>
+                <Menu.Item className="menu-item">
+                  Add to Playlist
+                </Menu.Item>
+                <Menu.Separator className="mx-4 my-1.5 h-px bg-background-thick" />
+                <Menu.Item className="menu-item">
+                  Play Next
+                </Menu.Item>
+                <Menu.Item className="menu-item">
+                  Play Last
+                </Menu.Item>
+                <Menu.Separator className="mx-4 my-1.5 h-px bg-background-thick" />
+                <Menu.Item className="menu-item">
+                  Favorite
+                </Menu.Item>
+                <Menu.Item className="menu-item">
+                  Share
+                </Menu.Item>
+              </Menu.Popup>
+            </Menu.Positioner>
+          </Menu.Portal>
+        </Menu.Root>
+      </div>
+
+      <p className="p-3 my-20">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, commodi at! Accusamus et sit, fugit perspiciatis, architecto aperiam ad impedit dignissimos voluptatem dolorum possimus voluptas deleniti. Dolores nam dicta aliquam perferendis corporis non accusantium veniam sed minus earum rerum magni temporibus incidunt, minima velit, ad harum placeat. Obcaecati sint neque cum pariatur eaque rem, numquam, rerum possimus soluta, natus voluptatum aliquid nam eos eius nulla ad reprehenderit. Officiis nam nostrum cum. Dolor corporis cumque suscipit modi voluptatibus quis nam eum ratione in minus voluptates soluta culpa esse adipisci quos incidunt consectetur veritatis, recusandae mollitia dolorum saepe? Odit ullam nostrum aperiam?
+      </p>
     </>
   )
 }
