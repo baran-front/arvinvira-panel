@@ -2,7 +2,7 @@
 
 import ToastButton from "@/components/modules/toastButton/toastButton"
 import { Rating } from "@/components/ui/rating/rating"
-import { AlertDialog, Button, Checkbox, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
+import { AlertDialog, Button, Checkbox, Dialog, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
 import { CheckIcon, StarIcon, XIcon } from "lucide-react"
 import { useState } from "react";
 
@@ -29,7 +29,7 @@ function Page() {
           <Button className={"btn btn-rounded btn-fill palette-secondary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-fill palette-danger"}>
+          <Button className={"btn btn-rounded btn-fill palette-error"}>
             کلیک
           </Button>
           <Button className={"btn btn-rounded btn-fill palette-warning"}>
@@ -58,7 +58,7 @@ function Page() {
           <Button className={"btn btn-rounded btn-outline palette-secondary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-outline palette-danger"}>
+          <Button className={"btn btn-rounded btn-outline palette-error"}>
             کلیک
           </Button>
           <Button className={"btn btn-rounded btn-outline palette-warning"}>
@@ -87,7 +87,7 @@ function Page() {
           <Button className={"btn btn-rounded btn-soft palette-secondary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-soft palette-danger"}>
+          <Button className={"btn btn-rounded btn-soft palette-error"}>
             کلیک
           </Button>
           <Button className={"btn btn-rounded btn-soft palette-warning"}>
@@ -116,7 +116,7 @@ function Page() {
           <Button className={"btn btn-rounded btn-ghost palette-secondary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-ghost palette-danger"}>
+          <Button className={"btn btn-rounded btn-ghost palette-error"}>
             کلیک
           </Button>
           <Button className={"btn btn-rounded btn-ghost palette-warning"}>
@@ -224,7 +224,7 @@ function Page() {
         </div>
         <span className="badge badge-outline mt-3 palette-primary">لورم ایپسوم</span>
         <span className="badge badge-outline mt-3 palette-secondary">لورم ایپسوم</span>
-        <span className="badge badge-outline mt-3 palette-danger">لورم ایپسوم</span>
+        <span className="badge badge-outline mt-3 palette-error">لورم ایپسوم</span>
         <span className="badge badge-outline mt-3 palette-warning">لورم ایپسوم</span>
         <span className="badge badge-outline mt-3 palette-info">لورم ایپسوم</span>
       </div>
@@ -233,7 +233,7 @@ function Page() {
         <p className="text-5xl font-bold">تگ:</p>
         <p className="badge badge-soft badge-rounded mt-6">
           <span>دسته بندی ها</span>
-          <XIcon className="badge-icon-size text-danger" />
+          <XIcon className="badge-icon-size text-error" />
         </p>
       </div>
 
@@ -247,7 +247,7 @@ function Page() {
               </span>
               <span className="tabs-badge">20</span>
             </Tabs.Tab>
-            <Tabs.Tab className={"tabs-tab palette-danger"} value="projects">
+            <Tabs.Tab className={"tabs-tab palette-error"} value="projects">
               <span>
                 سرور و امنیت
               </span>
@@ -289,8 +289,8 @@ function Page() {
       <div className="p-3 mt-9">
         <p className="text-5xl font-bold">آلرت دیالوگ:</p>
         <AlertDialog.Root>
-          <AlertDialog.Trigger className="btn btn-fill mt-6">
-            Discard draft
+          <AlertDialog.Trigger className="btn btn-fill palette-error mt-6">
+            حذف
           </AlertDialog.Trigger>
           <AlertDialog.Portal>
             <AlertDialog.Backdrop className="dialog-backdrop" />
@@ -308,7 +308,7 @@ function Page() {
                     بستن
                   </span>
                 </AlertDialog.Close>
-                <AlertDialog.Close className="btn btn-fill palette-danger">
+                <AlertDialog.Close className="btn btn-fill palette-error">
                   <span>
                     حذف
                   </span>
@@ -318,6 +318,29 @@ function Page() {
             </AlertDialog.Popup>
           </AlertDialog.Portal>
         </AlertDialog.Root>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">دیالوگ:</p>
+        <Dialog.Root>
+          <Dialog.Trigger className="btn btn-fill mt-6">
+            مشاهده اعلان ها
+          </Dialog.Trigger>
+          <Dialog.Portal>
+            <Dialog.Backdrop className="dialog-backdrop" />
+            <Dialog.Popup className="dialog-popup">
+              <Dialog.Title className="dialog-title">23 اعلان جدید</Dialog.Title>
+              <Dialog.Description className="dialog-description">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              </Dialog.Description>
+              <div className="dialog-footer">
+                <Dialog.Close className="btn btn-soft">
+                  باشه
+                </Dialog.Close>
+              </div>
+            </Dialog.Popup>
+          </Dialog.Portal>
+        </Dialog.Root>
       </div>
     </>
   )

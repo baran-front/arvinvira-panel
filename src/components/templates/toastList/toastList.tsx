@@ -14,7 +14,7 @@ function ToastList() {
       className={cn("toast border-2",
         toast.data.status === "info" && "bg-info-foreground text-info border-info",
         toast.data.status === "success" && "bg-success-foreground text-success border-success",
-        toast.data.status === "error" && "bg-danger-foreground text-danger border-danger",
+        toast.data.status === "error" && "bg-error-foreground text-error border-error",
         toast.data.status === "warning" && "bg-warning-foreground text-warning border-warning",
       )}>
       <Toast.Content className={"f-align gap-3"}>
