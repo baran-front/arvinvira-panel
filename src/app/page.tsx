@@ -1,6 +1,6 @@
 import ToastButton from "@/components/modules/toastButton/toastButton"
 import { Button, Checkbox, Radio, RadioGroup } from "@base-ui-components/react"
-import { CheckIcon } from "lucide-react"
+import { CheckIcon, XIcon } from "lucide-react"
 
 function Page() {
   return (
@@ -9,117 +9,117 @@ function Page() {
         <p className="text-5xl font-bold">دکمه ها:</p>
 
         <div className="f-align gap-3 mt-6">
-          <Button className={"btn btn-fill"}>
+          <Button className={"btn btn-rounded btn-fill"}>
             کلیک
           </Button>
           <div className="p-3 bg-foreground palette-background">
-            <Button className={"btn btn-fill"}>
+            <Button className={"btn btn-rounded btn-fill"}>
               کلیک
             </Button>
           </div>
-          <Button className={"btn btn-fill palette-primary"}>
+          <Button className={"btn btn-rounded btn-fill palette-primary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-fill palette-secondary"}>
+          <Button className={"btn btn-rounded btn-fill palette-secondary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-fill palette-danger"}>
+          <Button className={"btn btn-rounded btn-fill palette-danger"}>
             کلیک
           </Button>
-          <Button className={"btn btn-fill palette-warning"}>
+          <Button className={"btn btn-rounded btn-fill palette-warning"}>
             کلیک
           </Button>
-          <Button className={"btn btn-fill palette-success"}>
+          <Button className={"btn btn-rounded btn-fill palette-success"}>
             کلیک
           </Button>
-          <Button className={"btn btn-fill palette-info"}>
+          <Button className={"btn btn-rounded btn-fill palette-info"}>
             کلیک
           </Button>
         </div>
 
         <div className="f-align gap-3 separate separate-t border-dashed border-background-thick">
-          <Button className={"btn btn-outline"}>
+          <Button className={"btn btn-rounded btn-outline"}>
             کلیک
           </Button>
           <div className="p-3 bg-foreground palette-background">
-            <Button className={"btn btn-outline"}>
+            <Button className={"btn btn-rounded btn-outline"}>
               کلیک
             </Button>
           </div>
-          <Button className={"btn btn-outline palette-primary"}>
+          <Button className={"btn btn-rounded btn-outline palette-primary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-outline palette-secondary"}>
+          <Button className={"btn btn-rounded btn-outline palette-secondary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-outline palette-danger"}>
+          <Button className={"btn btn-rounded btn-outline palette-danger"}>
             کلیک
           </Button>
-          <Button className={"btn btn-outline palette-warning"}>
+          <Button className={"btn btn-rounded btn-outline palette-warning"}>
             کلیک
           </Button>
-          <Button className={"btn btn-outline palette-success"}>
+          <Button className={"btn btn-rounded btn-outline palette-success"}>
             کلیک
           </Button>
-          <Button className={"btn btn-outline palette-info"}>
+          <Button className={"btn btn-rounded btn-outline palette-info"}>
             کلیک
           </Button>
         </div>
 
         <div className="f-align gap-3 separate separate-t border-dashed border-background-thick">
-          <Button className={"btn btn-soft"}>
+          <Button className={"btn btn-rounded btn-soft"}>
             کلیک
           </Button>
           <div className="p-3 bg-foreground palette-background">
-            <Button className={"btn btn-soft"}>
+            <Button className={"btn btn-rounded btn-soft"}>
               کلیک
             </Button>
           </div>
-          <Button className={"btn btn-soft palette-primary"}>
+          <Button className={"btn btn-rounded btn-soft palette-primary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-soft palette-secondary"}>
+          <Button className={"btn btn-rounded btn-soft palette-secondary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-soft palette-danger"}>
+          <Button className={"btn btn-rounded btn-soft palette-danger"}>
             کلیک
           </Button>
-          <Button className={"btn btn-soft palette-warning"}>
+          <Button className={"btn btn-rounded btn-soft palette-warning"}>
             کلیک
           </Button>
-          <Button className={"btn btn-soft palette-success"}>
+          <Button className={"btn btn-rounded btn-soft palette-success"}>
             کلیک
           </Button>
-          <Button className={"btn btn-soft palette-info"}>
+          <Button className={"btn btn-rounded btn-soft palette-info"}>
             کلیک
           </Button>
         </div>
 
         <div className="f-align gap-3 separate separate-t border-dashed border-background-thick">
-          <Button className={"btn btn-ghost"}>
+          <Button className={"btn btn-rounded btn-ghost"}>
             کلیک
           </Button>
           <div className="p-3 bg-foreground palette-background">
-            <Button className={"btn btn-ghost"}>
+            <Button className={"btn btn-rounded btn-ghost"}>
               کلیک
             </Button>
           </div>
-          <Button className={"btn btn-ghost palette-primary"}>
+          <Button className={"btn btn-rounded btn-ghost palette-primary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-ghost palette-secondary"}>
+          <Button className={"btn btn-rounded btn-ghost palette-secondary"}>
             کلیک
           </Button>
-          <Button className={"btn btn-ghost palette-danger"}>
+          <Button className={"btn btn-rounded btn-ghost palette-danger"}>
             کلیک
           </Button>
-          <Button className={"btn btn-ghost palette-warning"}>
+          <Button className={"btn btn-rounded btn-ghost palette-warning"}>
             کلیک
           </Button>
-          <Button className={"btn btn-ghost palette-success"}>
+          <Button className={"btn btn-rounded btn-ghost palette-success"}>
             کلیک
           </Button>
-          <Button className={"btn btn-ghost palette-info"}>
+          <Button className={"btn btn-rounded btn-ghost palette-info"}>
             کلیک
           </Button>
         </div>
@@ -221,6 +221,14 @@ function Page() {
         <span className="badge badge-outline mt-3 palette-danger">لورم ایپسوم</span>
         <span className="badge badge-outline mt-3 palette-warning">لورم ایپسوم</span>
         <span className="badge badge-outline mt-3 palette-info">لورم ایپسوم</span>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">تگ:</p>
+        <p className="badge badge-soft badge-rounded mt-6">
+          <span>دسته بندی ها</span>
+          <XIcon className="badge-icon-size text-danger" />
+        </p>
       </div>
     </>
   )

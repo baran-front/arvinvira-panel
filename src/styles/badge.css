@@ -2,7 +2,7 @@
   --badge-w: max-content;
   --badge-h: calc(var(--spacing) * 9);
   --badge-px: calc(var(--spacing) * 3);
-  --badge-radius: var(--radius-md);
+  --badge-radius: var(--radius-lg);
   --badge-text: var(--text-base);
   --badge-line: var(--tw-leading, var(--text-base--line-height));
 
@@ -20,7 +20,7 @@
 @utility badge-sm {
   --badge-h: calc(var(--spacing) * 6);
   --badge-px: calc(var(--spacing) * 1.5);
-  --badge-radius: var(--radius-sm);
+  --badge-radius: var(--radius-md);
   --badge-text: var(--text-sm);
   --badge-line: var(--tw-leading, var(--text-sm--line-height));
 }
@@ -28,7 +28,7 @@
 @utility badge-lg {
   --badge-h: calc(var(--spacing) * 12);
   --badge-px: calc(var(--spacing) * 6);
-  --badge-radius: var(--radius-lg);
+  --badge-radius: var(--radius-xl);
   --badge-text: var(--text-lg);
   --badge-line: var(--tw-leading, var(--text-lg--line-height));
 }
@@ -38,6 +38,10 @@
   --badge-px: 0;
 
   min-width: var(--badge-w);
+}
+
+@utility badge-rounded {
+  --badge-radius: calc(infinity * 1px);
 }
 
 @utility badge-full {
