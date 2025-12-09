@@ -1,5 +1,5 @@
 import ToastButton from "@/components/modules/toastButton/toastButton"
-import { Button, Checkbox, Radio, RadioGroup } from "@base-ui-components/react"
+import { Button, Checkbox, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
 import { CheckIcon, XIcon } from "lucide-react"
 
 function Page() {
@@ -229,6 +229,41 @@ function Page() {
           <span>دسته بندی ها</span>
           <XIcon className="badge-icon-size text-danger" />
         </p>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">تب:</p>
+        <Tabs.Root className={"mt-6"} defaultValue="overview">
+          <Tabs.List className={"tabs-list"}>
+            <Tabs.Tab className={"tabs-tab group"} value="overview">
+              <span>
+                فروش
+              </span>
+              <span className="badge badge-soft badge-sm badge-rounded palette-danger group-data-active:shadow-danger/20 shadow-md shadow-transparent">20</span>
+            </Tabs.Tab>
+            <Tabs.Tab className={"btn btn-rounded data-active:shadow-foreground/10 shadow-xl shadow-transparent group"} value="projects">
+              <span>
+                سرور و امنیت
+              </span>
+              <span className="badge badge-soft badge-sm badge-rounded palette-danger group-data-active:shadow-danger/20 shadow-md shadow-transparent">20</span>
+            </Tabs.Tab>
+            <Tabs.Tab className={"btn btn-rounded data-active:shadow-foreground/10 shadow-xl shadow-transparent group"} value="account">
+              <span>
+                بایگانی
+              </span>
+              <span className="badge badge-soft badge-sm badge-rounded palette-danger group-data-active:shadow-danger/20 shadow-md shadow-transparent">20</span>
+            </Tabs.Tab>
+          </Tabs.List>
+          <Tabs.Panel className={"p-3"} value="overview">
+            OverviewIcon
+          </Tabs.Panel>
+          <Tabs.Panel className={"p-3"} value="projects">
+            ProjectIcon
+          </Tabs.Panel>
+          <Tabs.Panel className={"p-3"} value="account">
+            PersonIcon
+          </Tabs.Panel>
+        </Tabs.Root>
       </div>
     </>
   )

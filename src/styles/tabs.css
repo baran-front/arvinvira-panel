@@ -1,0 +1,11 @@
+@utility tabs-list {
+  @apply f-align gap-3;
+}
+
+@utility tabs-tab {
+  @apply btn btn-rounded data-active:shadow-foreground/10 shadow-xl shadow-transparent;
+}
+
+@utility tabs-panel {
+  @apply p-3;
+}
