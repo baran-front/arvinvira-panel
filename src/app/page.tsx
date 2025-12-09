@@ -2,7 +2,7 @@
 
 import ToastButton from "@/components/modules/toastButton/toastButton"
 import { Rating } from "@/components/ui/rating/rating"
-import { Button, Checkbox, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
+import { AlertDialog, Button, Checkbox, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
 import { CheckIcon, StarIcon, XIcon } from "lucide-react"
 import { useState } from "react";
 
@@ -274,16 +274,50 @@ function Page() {
 
       <div className="p-3 mt-9">
         <p className="text-5xl font-bold">ریت:</p>
-        <Rating className="rating mt-3">
+        <Rating className="rating mt-6">
           <Rating.Items
             className="rating-items"
             count={5}
             value={rating}
             onValueChange={setRating}
             element={<StarIcon className="text-background-thick size-9" />}
-            activeElement={<StarIcon className="fill-warning text-warning size-9" />}
+            activeElement={<StarIcon className="fill-yellow-500 text-yellow-500 size-9" />}
           />
         </Rating>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">آلرت دیالوگ:</p>
+        <AlertDialog.Root>
+          <AlertDialog.Trigger className="btn btn-fill mt-6">
+            Discard draft
+          </AlertDialog.Trigger>
+          <AlertDialog.Portal>
+            <AlertDialog.Backdrop className="dialog-backdrop" />
+            <AlertDialog.Popup className="dialog-popup">
+              <AlertDialog.Title className="dialog-title">
+                از حذف این آیتم مطمعن هستید؟
+              </AlertDialog.Title>
+              <AlertDialog.Description className="dialog-description">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+              </AlertDialog.Description>
+              <div className="dialog-footer">
+                <AlertDialog.Close className={"btn btn-soft"}>
+                  <XIcon className="btn-icon-size" />
+                  <span>
+                    بستن
+                  </span>
+                </AlertDialog.Close>
+                <AlertDialog.Close className="btn btn-fill palette-danger">
+                  <span>
+                    حذف
+                  </span>
+                  <CheckIcon className="btn-icon-size" />
+                </AlertDialog.Close>
+              </div>
+            </AlertDialog.Popup>
+          </AlertDialog.Portal>
+        </AlertDialog.Root>
       </div>
     </>
   )

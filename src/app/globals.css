@@ -6,12 +6,12 @@
 @import "./../styles/radio.css";
 @import "./../styles/tabs.css";
 @import "./../styles/rating.css";
+@import "./../styles/dialog.css";
 @import "./../styles/separator.css";
 @import "./../styles/avatar.css";
 @import "./../styles/toast.css";
 
 @theme {
-  --color-*: initial;
   --color-background: #f1f1f1;
   --color-background-thin: #ffffff;
   --color-background-thick: #aaaaaa;
