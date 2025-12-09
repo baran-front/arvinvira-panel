@@ -1,8 +1,14 @@
+"use client";
+
 import ToastButton from "@/components/modules/toastButton/toastButton"
+import { Rating } from "@/components/ui/rating/rating"
 import { Button, Checkbox, Radio, RadioGroup, Tabs } from "@base-ui-components/react"
-import { CheckIcon, XIcon } from "lucide-react"
+import { CheckIcon, StarIcon, XIcon } from "lucide-react"
+import { useState } from "react";
 
 function Page() {
+  const [rating, setRating] = useState(3);
+
   return (
     <>
       <div className="p-3">
@@ -235,23 +241,23 @@ function Page() {
         <p className="text-5xl font-bold">تب:</p>
         <Tabs.Root className={"mt-6"} defaultValue="overview">
           <Tabs.List className={"tabs-list"}>
-            <Tabs.Tab className={"tabs-tab group"} value="overview">
+            <Tabs.Tab className={"tabs-tab palette-success"} value="overview">
               <span>
                 فروش
               </span>
-              <span className="badge badge-soft badge-sm badge-rounded palette-danger group-data-active:shadow-danger/20 shadow-md shadow-transparent">20</span>
+              <span className="tabs-badge">20</span>
             </Tabs.Tab>
-            <Tabs.Tab className={"btn btn-rounded data-active:shadow-foreground/10 shadow-xl shadow-transparent group"} value="projects">
+            <Tabs.Tab className={"tabs-tab palette-danger"} value="projects">
               <span>
                 سرور و امنیت
               </span>
-              <span className="badge badge-soft badge-sm badge-rounded palette-danger group-data-active:shadow-danger/20 shadow-md shadow-transparent">20</span>
+              <span className="tabs-badge">20</span>
             </Tabs.Tab>
-            <Tabs.Tab className={"btn btn-rounded data-active:shadow-foreground/10 shadow-xl shadow-transparent group"} value="account">
+            <Tabs.Tab className={"tabs-tab palette-warning"} value="account">
               <span>
                 بایگانی
               </span>
-              <span className="badge badge-soft badge-sm badge-rounded palette-danger group-data-active:shadow-danger/20 shadow-md shadow-transparent">20</span>
+              <span className="tabs-badge">20</span>
             </Tabs.Tab>
           </Tabs.List>
           <Tabs.Panel className={"p-3"} value="overview">
@@ -264,6 +270,20 @@ function Page() {
             PersonIcon
           </Tabs.Panel>
         </Tabs.Root>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">ریت:</p>
+        <Rating className="rating mt-3">
+          <Rating.Items
+            className="rating-items"
+            count={5}
+            value={rating}
+            onValueChange={setRating}
+            element={<StarIcon className="text-background-thick size-9" />}
+            activeElement={<StarIcon className="fill-warning text-warning size-9" />}
+          />
+        </Rating>
       </div>
     </>
   )
