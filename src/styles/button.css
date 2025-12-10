@@ -64,6 +64,10 @@
   @apply text-palette hover:bg-palette/10;
 }
 
+@utility btn-float {
+  @apply bg-palette/80 backdrop-blur-sm border-3 border-palette text-brush outline-offset-2 hover:bg-palette/70;
+}
+
 @utility btn-icon-size {
   width: clamp(calc(var(--btn-h) / 2), calc(var(--btn-h) / 2), calc(var(--btn-h) / 2));
   height: clamp(calc(var(--btn-h) / 2), calc(var(--btn-h) / 2), calc(var(--btn-h) / 2));

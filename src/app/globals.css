@@ -15,6 +15,7 @@
 @import "./../styles/separator.css";
 @import "./../styles/avatar.css";
 @import "./../styles/toast.css";
+@import "./../styles/pagination.css";
 
 @theme {
   --color-background: #f1f1f1;

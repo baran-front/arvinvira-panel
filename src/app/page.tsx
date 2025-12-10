@@ -3,12 +3,65 @@
 import ToastButton from "@/components/modules/toastButton/toastButton"
 import MenuArrowSvg, { MENU_POSITIONER_SIDE_OFFSET } from "@/components/ui/menu/menuSetting";
 import { Otp } from "@/components/ui/otp/otp";
+import { PaginationWithState } from "@/components/ui/pagination/pagination";
 import { Rating } from "@/components/ui/rating/rating"
 import TooltipArrowSvg from "@/components/ui/tooptip/tooltip";
 import { Upload } from "@/components/ui/upload/upload";
 import { AlertDialog, Button, Checkbox, Dialog, Menu, Radio, RadioGroup, Switch, Tabs, Tooltip } from "@base-ui-components/react"
-import { CheckIcon, ChevronDownIcon, PlusIcon, StarIcon, UserIcon, XIcon } from "lucide-react"
+import { CheckIcon, ChevronDownIcon, ChevronRightIcon, ChevronLeftIcon, PlusIcon, StarIcon, UserIcon, XIcon, CircleIcon } from "lucide-react"
 import { useState } from "react";
+
+const PAGES_WITH_STATE = [
+  {
+    name: "فرم اول",
+    component: (
+      <>
+        <p>
+          اول: لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+        </p>
+
+        <div className="f-align gap-3 mt-3">
+          <PaginationWithState.NextBtn className="btn btn-soft btn-square">
+            <ChevronLeftIcon className="btn-icon-size" />
+          </PaginationWithState.NextBtn>
+        </div>
+      </>
+    ),
+  },
+  {
+    name: "فرم دوم",
+    component: (
+      <>
+        <p>
+          دوم: لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+        </p>
+        <div className="f-align gap-3 mt-3">
+          <PaginationWithState.PrevBtn className="btn btn-soft btn-square">
+            <ChevronRightIcon className="btn-icon-size" />
+          </PaginationWithState.PrevBtn>
+          <PaginationWithState.NextBtn className="btn btn-soft btn-square">
+            <ChevronLeftIcon className="btn-icon-size" />
+          </PaginationWithState.NextBtn>
+        </div>
+      </>
+    ),
+  },
+  {
+    name: "فرم سوم",
+    component: (
+      <>
+        <p>
+          سوم: لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+        </p>
+        <div className="f-align gap-3 mt-3">
+          <PaginationWithState.PrevBtn className="btn btn-soft btn-square">
+            <ChevronRightIcon className="btn-icon-size" />
+          </PaginationWithState.PrevBtn>
+        </div>
+      </>
+    ),
+  },
+];
 
 function Page() {
   const [rating, setRating] = useState(3);
@@ -131,6 +184,38 @@ function Page() {
           </Button>
           <Button className={"btn btn-rounded btn-ghost palette-info"}>
             کلیک
+          </Button>
+        </div>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">دکمه شناور:</p>
+        <div className="f-align gap-3 mt-6">
+          <Button className={"btn btn-square btn-float btn-rounded"}>
+            <PlusIcon className="btn-icon-size" />
+          </Button>
+          <div className="p-3 bg-foreground palette-background">
+            <Button className={"btn btn-square btn-float btn-rounded"}>
+              <PlusIcon className="btn-icon-size" />
+            </Button>
+          </div>
+          <Button className={"btn btn-square btn-float btn-rounded palette-primary"}>
+            <PlusIcon className="btn-icon-size" />
+          </Button>
+          <Button className={"btn btn-square btn-float btn-rounded palette-secondary"}>
+            <PlusIcon className="btn-icon-size" />
+          </Button>
+          <Button className={"btn btn-square btn-float btn-rounded palette-error"}>
+            <PlusIcon className="btn-icon-size" />
+          </Button>
+          <Button className={"btn btn-square btn-float btn-rounded palette-warning"}>
+            <PlusIcon className="btn-icon-size" />
+          </Button>
+          <Button className={"btn btn-square btn-float btn-rounded palette-success"}>
+            <PlusIcon className="btn-icon-size" />
+          </Button>
+          <Button className={"btn btn-square btn-float btn-rounded palette-info"}>
+            <PlusIcon className="btn-icon-size" />
           </Button>
         </div>
       </div>
@@ -493,6 +578,27 @@ function Page() {
         >
           <Switch.Thumb className="switch-thumb" />
         </Switch.Root>
+      </div>
+
+      <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">استپ:</p>
+        <PaginationWithState className="mt-6" pages={PAGES_WITH_STATE}>
+          <div className="f-center gap-3">
+            <PaginationWithState.Counts
+              className="btn data-[skipped=false]:btn-soft btn-square btn-rounded data-[skipped=true]:btn-fill data-[skipped=true]:palette-primary"
+              progressElement={<div className="w-32 f-center gap-1.5 group">
+                <div className="h-1 w-1/4 rounded-full bg-background-thick group-data-[skipped=true]:bg-primary" />
+                <div className="h-1 w-1/4 rounded-full bg-background-thick group-data-[skipped=true]:bg-primary" />
+                <div className="h-1 w-1/4 rounded-full bg-background-thick group-data-[in-progress=true]:bg-primary" />
+                <div className="h-1 w-1/4 rounded-full bg-background-thick group-data-[in-progress=true]:bg-primary" />
+              </div>}
+            >
+              <CircleIcon className="btn-icon-size" />
+            </PaginationWithState.Counts>
+          </div>
+
+          <PaginationWithState.Pages />
+        </PaginationWithState>
       </div>
 
       <p className="p-3 my-20">
