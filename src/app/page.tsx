@@ -1,13 +1,14 @@
 "use client";
 
 import ToastButton from "@/components/modules/toastButton/toastButton"
+import Button from "@/components/ui/button/button";
 import MenuArrowSvg, { MENU_POSITIONER_SIDE_OFFSET } from "@/components/ui/menu/menuSetting";
 import { Otp } from "@/components/ui/otp/otp";
 import { PaginationWithState } from "@/components/ui/pagination/pagination";
 import { Rating } from "@/components/ui/rating/rating"
 import TooltipArrowSvg from "@/components/ui/tooptip/tooltip";
 import { Upload } from "@/components/ui/upload/upload";
-import { AlertDialog, Button, Checkbox, Dialog, Menu, Radio, RadioGroup, Switch, Tabs, Tooltip } from "@base-ui-components/react"
+import { AlertDialog, Checkbox, Dialog, Menu, Radio, RadioGroup, Switch, Tabs, Tooltip } from "@base-ui-components/react"
 import { CheckIcon, ChevronDownIcon, ChevronRightIcon, ChevronLeftIcon, PlusIcon, StarIcon, UserIcon, XIcon, CircleIcon } from "lucide-react"
 import { useState } from "react";
 
@@ -72,117 +73,117 @@ function Page() {
         <p className="text-5xl font-bold">دکمه ها:</p>
 
         <div className="f-align gap-3 mt-6">
-          <Button className={"btn btn-rounded btn-fill"}>
+          <Button variant="fill" color="foreground" isRounded>
             کلیک
           </Button>
-          <div className="p-3 bg-foreground palette-background">
-            <Button className={"btn btn-rounded btn-fill"}>
+          <div className="p-3 bg-foreground">
+            <Button variant="fill" color="background" isRounded>
               کلیک
             </Button>
           </div>
-          <Button className={"btn btn-rounded btn-fill palette-primary"}>
+          <Button variant="fill" color="primary" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-fill palette-secondary"}>
+          <Button variant="fill" color="secondary" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-fill palette-error"}>
+          <Button variant="fill" color="error" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-fill palette-warning"}>
+          <Button variant="fill" color="warning" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-fill palette-success"}>
+          <Button variant="fill" color="success" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-fill palette-info"}>
+          <Button variant="fill" color="info" isRounded>
             کلیک
           </Button>
         </div>
 
         <div className="f-align gap-3 separate separate-t border-dashed border-background-thick">
-          <Button className={"btn btn-rounded btn-outline"}>
+          <Button variant="outline" color="foreground" isRounded>
             کلیک
           </Button>
-          <div className="p-3 bg-foreground palette-background">
-            <Button className={"btn btn-rounded btn-outline"}>
+          <div className="p-3 bg-foreground">
+            <Button variant="outline" color="background" isRounded>
               کلیک
             </Button>
           </div>
-          <Button className={"btn btn-rounded btn-outline palette-primary"}>
+          <Button variant="outline" color="primary" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-outline palette-secondary"}>
+          <Button variant="outline" color="secondary" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-outline palette-error"}>
+          <Button variant="outline" color="error" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-outline palette-warning"}>
+          <Button variant="outline" color="warning" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-outline palette-success"}>
+          <Button variant="outline" color="success" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-outline palette-info"}>
+          <Button variant="outline" color="info" isRounded>
             کلیک
           </Button>
         </div>
 
         <div className="f-align gap-3 separate separate-t border-dashed border-background-thick">
-          <Button className={"btn btn-rounded btn-soft"}>
+          <Button variant="soft" color="foreground" isRounded>
             کلیک
           </Button>
-          <div className="p-3 bg-foreground palette-background">
-            <Button className={"btn btn-rounded btn-soft"}>
+          <div className="p-3 bg-foreground">
+            <Button variant="soft" color="background" isRounded>
               کلیک
             </Button>
           </div>
-          <Button className={"btn btn-rounded btn-soft palette-primary"}>
+          <Button variant="soft" color="primary" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-soft palette-secondary"}>
+          <Button variant="soft" color="secondary" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-soft palette-error"}>
+          <Button variant="soft" color="error" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-soft palette-warning"}>
+          <Button variant="soft" color="warning" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-soft palette-success"}>
+          <Button variant="soft" color="success" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-soft palette-info"}>
+          <Button variant="soft" color="info" isRounded>
             کلیک
           </Button>
         </div>
 
         <div className="f-align gap-3 separate separate-t border-dashed border-background-thick">
-          <Button className={"btn btn-rounded btn-ghost"}>
+          <Button variant="ghost" color="foreground" isRounded>
             کلیک
           </Button>
-          <div className="p-3 bg-foreground palette-background">
-            <Button className={"btn btn-rounded btn-ghost"}>
+          <div className="p-3 bg-foreground">
+            <Button variant="ghost" color="background" isRounded>
               کلیک
             </Button>
           </div>
-          <Button className={"btn btn-rounded btn-ghost palette-primary"}>
+          <Button variant="ghost" color="primary" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-ghost palette-secondary"}>
+          <Button variant="ghost" color="secondary" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-ghost palette-error"}>
+          <Button variant="ghost" color="error" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-ghost palette-warning"}>
+          <Button variant="ghost" color="warning" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-ghost palette-success"}>
+          <Button variant="ghost" color="success" isRounded>
             کلیک
           </Button>
-          <Button className={"btn btn-rounded btn-ghost palette-info"}>
+          <Button variant="ghost" color="info" isRounded>
             کلیک
           </Button>
         </div>
@@ -191,30 +192,30 @@ function Page() {
       <div className="p-3 mt-9">
         <p className="text-5xl font-bold">دکمه شناور:</p>
         <div className="f-align gap-3 mt-6">
-          <Button className={"btn btn-square btn-float btn-rounded"}>
+          <Button variant="float" color="foreground" isRounded isSquare>
             <PlusIcon className="btn-icon-size" />
           </Button>
-          <div className="p-3 bg-foreground palette-background">
-            <Button className={"btn btn-square btn-float btn-rounded"}>
+          <div className="p-3 bg-foreground">
+            <Button variant="float" color="background" isRounded isSquare>
               <PlusIcon className="btn-icon-size" />
             </Button>
           </div>
-          <Button className={"btn btn-square btn-float btn-rounded palette-primary"}>
+          <Button variant="float" color="primary" isRounded isSquare>
             <PlusIcon className="btn-icon-size" />
           </Button>
-          <Button className={"btn btn-square btn-float btn-rounded palette-secondary"}>
+          <Button variant="float" color="secondary" isRounded isSquare>
             <PlusIcon className="btn-icon-size" />
           </Button>
-          <Button className={"btn btn-square btn-float btn-rounded palette-error"}>
+          <Button variant="float" color="error" isRounded isSquare>
             <PlusIcon className="btn-icon-size" />
           </Button>
-          <Button className={"btn btn-square btn-float btn-rounded palette-warning"}>
+          <Button variant="float" color="warning" isRounded isSquare>
             <PlusIcon className="btn-icon-size" />
           </Button>
-          <Button className={"btn btn-square btn-float btn-rounded palette-success"}>
+          <Button variant="float" color="success" isRounded isSquare>
             <PlusIcon className="btn-icon-size" />
           </Button>
-          <Button className={"btn btn-square btn-float btn-rounded palette-info"}>
+          <Button variant="float" color="info" isRounded isSquare>
             <PlusIcon className="btn-icon-size" />
           </Button>
         </div>
