@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Button from "./button";
+import { HeartIcon } from "lucide-react";
 
 const meta = {
   title: "UI/Button",
@@ -39,7 +40,9 @@ const meta = {
     },
     size: {
       control: { type: "select" },
-      options: ["sm", "lg"],
+      options: ["unstyled", "sm", "lg"],
+      mapping: { unstyled: undefined },
+      labels: { unstyled: "بدون استایل" },
     },
     isSquare: { control: "boolean" },
     isRounded: { control: "boolean" },
@@ -55,3 +58,167 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {};
+
+export const Fill: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+  },
+};
+
+export const Outline: Story = {
+  args: {
+    children: "دکمه",
+    variant: "outline",
+  },
+};
+
+export const Soft: Story = {
+  args: {
+    children: "دکمه",
+    variant: "soft",
+  },
+};
+
+export const Ghost: Story = {
+  args: {
+    children: "دکمه",
+    variant: "ghost",
+  },
+};
+
+export const Float: Story = {
+  args: {
+    children: "دکمه",
+    variant: "float",
+  },
+};
+
+export const Foreground: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "foreground",
+  },
+};
+
+export const Background: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "background",
+  },
+  render: (args) => (
+    <div className="p-3 bg-foreground">
+      <Button {...args} />
+    </div>
+  ),
+};
+
+export const Primary: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "primary",
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "secondary",
+  },
+};
+
+export const Error: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "error",
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "warning",
+  },
+};
+
+export const Success: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "success",
+  },
+};
+
+export const Info: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "info",
+  },
+};
+
+export const Sm: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "primary",
+    size: "sm",
+  },
+};
+
+export const Lg: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "primary",
+    size: "lg",
+  },
+};
+
+export const Square: Story = {
+  args: {
+    children: <HeartIcon className="btn-icon-size" />,
+    variant: "fill",
+    color: "primary",
+    isSquare: true,
+  },
+};
+
+export const Rounded: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "primary",
+    isSquare: false,
+    isRounded: true,
+  },
+};
+
+export const Full: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "primary",
+    isSquare: false,
+    isRounded: false,
+    isFull: true,
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children: "دکمه",
+    variant: "fill",
+    color: "primary",
+    isSquare: false,
+    isRounded: false,
+    isFull: false,
+    disabled: true,
+  },
+};
