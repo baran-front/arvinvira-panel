@@ -2,6 +2,7 @@
 
 import ToastButton from "@/components/modules/toastButton/toastButton"
 import Button from "@/components/ui/button/button";
+import Badge from "@/components/ui/badge/badge";
 import MenuArrowSvg, { MENU_POSITIONER_SIDE_OFFSET } from "@/components/ui/menu/menuSetting";
 import { Otp } from "@/components/ui/otp/otp";
 import { PaginationWithState } from "@/components/ui/pagination/pagination";
@@ -308,23 +309,23 @@ function Page() {
 
       <div className="p-3 mt-9">
         <p className="text-5xl font-bold">بج:</p>
-        <span className="badge badge-outline mt-6">لورم ایپسوم</span>
-        <div className="bg-foreground palette-background p-3 w-fix mt-3">
-          <span className="badge badge-outline">لورم ایپسوم</span>
+        <Badge variant="outline" className="mt-6">لورم ایپسوم</Badge>
+        <div className="bg-foreground p-3 w-fix mt-3">
+          <Badge variant="outline" color="background">لورم ایپسوم</Badge>
         </div>
-        <span className="badge badge-outline mt-3 palette-primary">لورم ایپسوم</span>
-        <span className="badge badge-outline mt-3 palette-secondary">لورم ایپسوم</span>
-        <span className="badge badge-outline mt-3 palette-error">لورم ایپسوم</span>
-        <span className="badge badge-outline mt-3 palette-warning">لورم ایپسوم</span>
-        <span className="badge badge-outline mt-3 palette-info">لورم ایپسوم</span>
+        <Badge variant="outline" color="primary" className="mt-3">لورم ایپسوم</Badge>
+        <Badge variant="outline" color="secondary" className="mt-3">لورم ایپسوم</Badge>
+        <Badge variant="outline" color="error" className="mt-3">لورم ایپسوم</Badge>
+        <Badge variant="outline" color="warning" className="mt-3">لورم ایپسوم</Badge>
+        <Badge variant="outline" color="info" className="mt-3">لورم ایپسوم</Badge>
       </div>
 
       <div className="p-3 mt-9">
         <p className="text-5xl font-bold">تگ:</p>
-        <p className="badge badge-soft badge-rounded mt-6">
+        <Badge variant="soft" isRounded className="mt-6">
           <span>دسته بندی ها</span>
           <XIcon className="badge-icon-size text-error" />
-        </p>
+        </Badge>
       </div>
 
       <div className="p-3 mt-9">
