@@ -1,6 +1,7 @@
 "use client";
 
 import ToastButton from "@/components/modules/toastButton/toastButton"
+import Avatar from "@/components/ui/avatar/avatar";
 import Button from "@/components/ui/button/button";
 import Badge from "@/components/ui/badge/badge";
 import MenuArrowSvg, { MENU_POSITIONER_SIDE_OFFSET } from "@/components/ui/menu/menuSetting";
@@ -188,10 +189,7 @@ function Page() {
             کلیک
           </Button>
         </div>
-      </div>
 
-      <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">دکمه شناور:</p>
         <div className="f-align gap-3 mt-6">
           <Button variant="float" color="foreground" isRounded isSquare>
             <PlusIcon className="btn-icon-size" />
@@ -223,38 +221,75 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
+        <p className="text-5xl font-bold">بج:</p>
+        <div className="f-align gap-3 mt-6">
+          <Badge variant="fill">لورم ایپسوم</Badge>
+          <div className="bg-foreground p-3">
+            <Badge variant="fill" color="background">لورم ایپسوم</Badge>
+          </div>
+          <Badge variant="fill" color="primary">لورم ایپسوم</Badge>
+          <Badge variant="fill" color="secondary">لورم ایپسوم</Badge>
+          <Badge variant="fill" color="error">لورم ایپسوم</Badge>
+          <Badge variant="fill" color="warning">لورم ایپسوم</Badge>
+          <Badge variant="fill" color="info">لورم ایپسوم</Badge>
+        </div>
+        <div className="f-align gap-3 mt-6">
+          <Badge variant="outline">لورم ایپسوم</Badge>
+          <div className="bg-foreground p-3">
+            <Badge variant="outline" color="background">لورم ایپسوم</Badge>
+          </div>
+          <Badge variant="outline" color="primary">لورم ایپسوم</Badge>
+          <Badge variant="outline" color="secondary">لورم ایپسوم</Badge>
+          <Badge variant="outline" color="error">لورم ایپسوم</Badge>
+          <Badge variant="outline" color="warning">لورم ایپسوم</Badge>
+          <Badge variant="outline" color="info">لورم ایپسوم</Badge>
+        </div>
+        <div className="f-align gap-3 mt-6">
+          <Badge variant="soft">لورم ایپسوم</Badge>
+          <div className="bg-foreground p-3">
+            <Badge variant="soft" color="background">لورم ایپسوم</Badge>
+          </div>
+          <Badge variant="soft" color="primary">لورم ایپسوم</Badge>
+          <Badge variant="soft" color="secondary">لورم ایپسوم</Badge>
+          <Badge variant="soft" color="error">لورم ایپسوم</Badge>
+          <Badge variant="soft" color="warning">لورم ایپسوم</Badge>
+          <Badge variant="soft" color="info">لورم ایپسوم</Badge>
+        </div>
+      </div>
+
+      <div className="p-3 mt-9">
         <p className="text-5xl font-bold">آواتار ها:</p>
         <div className="f-align gap-3 mt-6">
-          <div className="avatar avatar-xxl bg-background-thick" />
-          <div className="avatar avatar-xxl bg-background-thick avatar-circle" />
+          <Avatar size="xxl" className="bg-background-thick" />
+          <Avatar size="xxl" isCircle className="bg-background-thick" />
         </div>
         <div className="f-align gap-3 mt-3">
-          <div className="avatar avatar-xl bg-background-thick" />
-          <div className="avatar avatar-xl bg-background-thick avatar-circle" />
+          <Avatar size="xl" className="bg-background-thick" />
+          <Avatar size="xl" isCircle className="bg-background-thick" />
         </div>
         <div className="f-align gap-3 mt-3">
-          <div className="avatar avatar-lg bg-background-thick" />
-          <div className="avatar avatar-lg bg-background-thick avatar-circle" />
+          <Avatar size="lg" className="bg-background-thick" />
+          <Avatar size="lg" isCircle className="bg-background-thick" />
         </div>
         <div className="f-align gap-3 mt-3">
-          <div className="avatar bg-background-thick" />
-          <div className="avatar bg-background-thick avatar-circle" />
+          <Avatar className="bg-background-thick" />
+          <Avatar isCircle className="bg-background-thick" />
         </div>
         <div className="f-align gap-3 mt-3">
-          <div className="avatar avatar-sm bg-background-thick" />
-          <div className="avatar avatar-sm bg-background-thick avatar-circle" />
+          <Avatar size="sm" className="bg-background-thick" />
+          <Avatar size="sm" isCircle className="bg-background-thick" />
         </div>
         <div className="f-align gap-3 mt-3">
-          <div className="avatar avatar-xs bg-background-thick" />
-          <div className="avatar avatar-xs bg-background-thick avatar-circle" />
+          <Avatar size="xs" className="bg-background-thick" />
+          <Avatar size="xs" isCircle className="bg-background-thick" />
         </div>
         <div className="f-align gap-3 mt-3">
-          <div className="avatar avatar-xxs bg-background-thick" />
-          <div className="avatar avatar-xxs bg-background-thick avatar-circle" />
+          <Avatar size="xxs" className="bg-background-thick" />
+          <Avatar size="xxs" isCircle className="bg-background-thick" />
         </div>
         <div className="f-align gap-3 mt-3">
-          <div className="avatar avatar-xxxs bg-background-thick" />
-          <div className="avatar avatar-xxxs bg-background-thick avatar-circle" />
+          <Avatar size="xxxs" className="bg-background-thick" />
+          <Avatar size="xxxs" isCircle className="bg-background-thick" />
         </div>
       </div>
 
@@ -305,19 +340,6 @@ function Page() {
             سیستم
           </label>
         </RadioGroup>
-      </div>
-
-      <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">بج:</p>
-        <Badge variant="outline" className="mt-6">لورم ایپسوم</Badge>
-        <div className="bg-foreground p-3 w-fix mt-3">
-          <Badge variant="outline" color="background">لورم ایپسوم</Badge>
-        </div>
-        <Badge variant="outline" color="primary" className="mt-3">لورم ایپسوم</Badge>
-        <Badge variant="outline" color="secondary" className="mt-3">لورم ایپسوم</Badge>
-        <Badge variant="outline" color="error" className="mt-3">لورم ایپسوم</Badge>
-        <Badge variant="outline" color="warning" className="mt-3">لورم ایپسوم</Badge>
-        <Badge variant="outline" color="info" className="mt-3">لورم ایپسوم</Badge>
       </div>
 
       <div className="p-3 mt-9">
