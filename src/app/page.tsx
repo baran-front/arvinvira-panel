@@ -4,6 +4,7 @@ import ToastButton from "@/components/modules/toastButton/toastButton"
 import Avatar from "@/components/ui/avatar/avatar";
 import Button from "@/components/ui/button/button";
 import Badge from "@/components/ui/badge/badge";
+import Input, { InputField } from "@/components/ui/input/input";
 import MenuArrowSvg, { MENU_POSITIONER_SIDE_OFFSET } from "@/components/ui/menu/menuSetting";
 import { Otp } from "@/components/ui/otp/otp";
 import { PaginationWithState } from "@/components/ui/pagination/pagination";
@@ -459,15 +460,26 @@ function Page() {
       <div className="p-3 mt-9">
         <p className="text-5xl font-bold">اینپوت:</p>
 
-        <label className="input input-outline mt-6 max-w-96 input-rounded" htmlFor="input-1">
-          <UserIcon className="input-icon-size" />
-          <input className="input-field" id="input-1" type="text" />
-        </label>
+        <Input
+          variant="outline"
+          isRounded
+          icon={<UserIcon className="input-icon-size" />}
+          className="mt-6 max-w-96"
+          htmlFor="input-1"
+        >
+          <InputField id="input-1" type="text" />
+        </Input>
 
-        <label className="input input-soft mt-6 max-w-96 input-rounded palette-primary" htmlFor="input-2">
-          <UserIcon className="input-icon-size" />
-          <input className="input-field" id="input-2" type="text" />
-        </label>
+        <Input
+          variant="soft"
+          color="primary"
+          isRounded
+          icon={<UserIcon className="input-icon-size" />}
+          className="mt-6 max-w-96"
+          htmlFor="input-2"
+        >
+          <InputField id="input-2" type="text" />
+        </Input>
 
         <Otp className="otp mt-6" dir="ltr">
           <Otp.Inputs
