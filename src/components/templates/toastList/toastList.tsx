@@ -25,7 +25,7 @@ function ToastList() {
 
         <Toast.Description />
 
-        <Toast.Close className={"btn btn-ghost btn-square mr-auto"} aria-label="بستن">
+        <Toast.Close className={"btn btn-ghost btn-rounded btn-square mr-auto"} aria-label="بستن">
           <XIcon className="btn-icon-size" />
         </Toast.Close>
       </Toast.Content>
