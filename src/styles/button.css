@@ -18,16 +18,16 @@
 }
 
 @utility btn-sm {
-  --btn-h: calc(var(--spacing) * 6);
-  --btn-px: calc(var(--spacing) * 1.5);
+  --btn-h: calc(var(--spacing) * );
+  --btn-px: calc(var(--spacing) * 2);
   --btn-radius: var(--radius-md);
   --btn-text: var(--text-sm);
   --btn-line: var(--tw-leading, var(--text-sm--line-height));
 }
 
 @utility btn-lg {
-  --btn-h: calc(var(--spacing) * 12);
-  --btn-px: calc(var(--spacing) * 6);
+  --btn-h: calc(var(--spacing) * 11);
+  --btn-px: calc(var(--spacing) * 4);
   --btn-radius: var(--radius-xl);
   --btn-text: var(--text-lg);
   --btn-line: var(--tw-leading, var(--text-lg--line-height));
@@ -35,7 +35,7 @@
 
 @utility btn-square {
   --btn-w: var(--btn-h);
-  --btn-px: 0;
+  --btn-px: 0 !important;
 
   min-width: var(--btn-w);
 }
@@ -65,7 +65,7 @@
 }
 
 @utility btn-float {
-  @apply bg-palette/80 backdrop-blur-sm border-3 border-palette text-brush outline-offset-2 hover:bg-palette/70;
+  @apply bg-palette/50 backdrop-blur-sm border-3 border-palette text-brush outline-offset-2 hover:bg-palette/40;
 }
 
 @utility btn-icon-size {

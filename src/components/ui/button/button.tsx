@@ -8,15 +8,17 @@ function Button({
   isSquare,
   isRounded,
   isFull,
+  noEvent,
   className,
   ...props
 }: BaseButtonProps & {
   variant?: "fill" | "outline" | "soft" | "ghost" | "float",
-  color?: "foreground" | "background" | "primary" | "secondary" | "error" | "warning" | "success" | "info",
+  color?: "foreground" | "background" | "background-thin" | "background-thick" | "primary" | "secondary" | "error" | "warning" | "success" | "info",
   size?: "sm" | "lg",
   isSquare?: boolean,
   isRounded?: boolean,
   isFull?: boolean,
+  noEvent?: boolean
 }) {
   const variantClasses = {
     fill: "btn-fill",
@@ -28,6 +30,8 @@ function Button({
   const colorClasses = {
     foreground: "palette-foreground",
     background: "palette-background",
+    "background-thin": "palette-background-thin",
+    "background-thick": "palette-background-thick",
     primary: "palette-primary",
     secondary: "palette-secondary",
     error: "palette-error",
@@ -42,6 +46,7 @@ function Button({
   const squareClass = isSquare ? "btn-square" : "";
   const roundedClass = isRounded ? "btn-rounded" : "";
   const fullClass = isFull ? "btn-full" : "";
+  const noEventClass = noEvent ? "pointer-events-none" : "";
 
   return (
     <BaseButton
@@ -53,6 +58,7 @@ function Button({
         squareClass,
         roundedClass,
         fullClass,
+        noEventClass,
         className
       )}
       {...props}

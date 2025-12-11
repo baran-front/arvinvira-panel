@@ -1,5 +1,5 @@
-@utility container {
-  @apply px-3 mx-auto;
+@utility wrapper {
+  @apply px-6;
 }
 
 @utility no-scrollbar {
