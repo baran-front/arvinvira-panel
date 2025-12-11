@@ -73,7 +73,7 @@ function Page() {
   return (
     <>
       <div className="p-3">
-        <p className="text-5xl font-bold">دکمه ها:</p>
+        <p className="text-5xl font-ravi-bold">دکمه ها:</p>
 
         <div className="f-align gap-3 mt-6">
           <Button variant="fill" color="foreground" isRounded>
@@ -222,7 +222,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">بج:</p>
+        <p className="text-5xl font-ravi-bold">بج:</p>
         <div className="f-align gap-3 mt-6">
           <Badge variant="fill">لورم ایپسوم</Badge>
           <div className="bg-foreground p-3">
@@ -259,7 +259,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">آواتار ها:</p>
+        <p className="text-5xl font-ravi-bold">آواتار ها:</p>
         <div className="f-align gap-3 mt-6">
           <Avatar size="xxl" className="bg-background-thick" />
           <Avatar size="xxl" isCircle className="bg-background-thick" />
@@ -295,12 +295,12 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">توست ها:</p>
+        <p className="text-5xl font-ravi-bold">توست ها:</p>
         <ToastButton />
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">چک باکس:</p>
+        <p className="text-5xl font-ravi-bold">چک باکس:</p>
         <label className={"f-align gap-3 mt-6"}>
           <span>
             فعالسازی نوتیفیکیشن ها
@@ -314,7 +314,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">رادیو:</p>
+        <p className="text-5xl font-ravi-bold">رادیو:</p>
         <RadioGroup aria-labelledby={"radio"} defaultValue="system" className={"radio-group mt-6"}>
           <p id={"radio"}>
             تم وب سایت:
@@ -344,7 +344,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">تگ:</p>
+        <p className="text-5xl font-ravi-bold">تگ:</p>
         <Badge variant="soft" isRounded className="mt-6">
           <span>دسته بندی ها</span>
           <XIcon className="badge-icon-size text-error" />
@@ -352,7 +352,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">تب:</p>
+        <p className="text-5xl font-ravi-bold">تب:</p>
         <Tabs.Root className={"max-w-5xl mt-6"} defaultValue="1">
           <Tabs.List className={"tabs-list"}>
             <Tabs.Tab className={"tabs-tab palette-success"} value="1">
@@ -387,7 +387,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">ریت:</p>
+        <p className="text-5xl font-ravi-bold">ریت:</p>
         <Rating className="rating mt-6">
           <Rating.Items
             className="rating-items"
@@ -401,7 +401,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">آلرت دیالوگ:</p>
+        <p className="text-5xl font-ravi-bold">آلرت دیالوگ:</p>
         <AlertDialog.Root>
           <AlertDialog.Trigger className="btn btn-fill palette-error mt-6">
             حذف
@@ -435,7 +435,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">دیالوگ:</p>
+        <p className="text-5xl font-ravi-bold">دیالوگ:</p>
         <Dialog.Root>
           <Dialog.Trigger className="btn btn-fill mt-6">
             مشاهده اعلان ها
@@ -458,7 +458,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">اینپوت:</p>
+        <p className="text-5xl font-ravi-bold">اینپوت:</p>
 
         <Input
           variant="outline"
@@ -495,7 +495,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">آپلودر:</p>
+        <p className="text-5xl font-ravi-bold">آپلودر:</p>
         <Upload className="bg-background-thick f-center flex-col gap-3 p-6 rounded-lg max-w-96 mt-6">
           <div className="size-12 border-2 border-dashed border-foreground-mute f-center rounded-lg">
             <PlusIcon className="size-7" />
@@ -508,7 +508,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">آپلودر:</p>
+        <p className="text-5xl font-ravi-bold">آپلودر:</p>
 
         <Menu.Root>
           <Menu.Trigger className="btn btn-fill mt-6">
@@ -547,7 +547,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">تولتیپ:</p>
+        <p className="text-5xl font-ravi-bold">تولتیپ:</p>
 
         <Tooltip.Provider>
           <div className="f-align gap-3 mt-6">
@@ -609,7 +609,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">سوییچ:</p>
+        <p className="text-5xl font-ravi-bold">سوییچ:</p>
 
         <Switch.Root
           className="switch mt-6 palette-info"
@@ -619,7 +619,7 @@ function Page() {
       </div>
 
       <div className="p-3 mt-9">
-        <p className="text-5xl font-bold">استپ:</p>
+        <p className="text-5xl font-ravi-bold">استپ:</p>
         <PaginationWithState className="max-w-5xl mt-6" pages={PAGES_WITH_STATE}>
           <div className="f-center mb-3 gap-3">
             <PaginationWithState.Counts
