@@ -353,35 +353,35 @@ function Page() {
 
       <div className="p-3 mt-9">
         <p className="text-5xl font-bold">تب:</p>
-        <Tabs.Root className={"mt-6"} defaultValue="overview">
+        <Tabs.Root className={"max-w-5xl mt-6"} defaultValue="1">
           <Tabs.List className={"tabs-list"}>
-            <Tabs.Tab className={"tabs-tab palette-success"} value="overview">
+            <Tabs.Tab className={"tabs-tab palette-success"} value="1">
               <span>
                 فروش
               </span>
               <span className="tabs-badge">20</span>
             </Tabs.Tab>
-            <Tabs.Tab className={"tabs-tab palette-error"} value="projects">
+            <Tabs.Tab className={"tabs-tab palette-error"} value="2">
               <span>
                 سرور و امنیت
               </span>
               <span className="tabs-badge">20</span>
             </Tabs.Tab>
-            <Tabs.Tab className={"tabs-tab palette-warning"} value="account">
+            <Tabs.Tab className={"tabs-tab palette-warning"} value="3">
               <span>
                 بایگانی
               </span>
               <span className="tabs-badge">20</span>
             </Tabs.Tab>
           </Tabs.List>
-          <Tabs.Panel className={"p-3"} value="overview">
-            OverviewIcon
+          <Tabs.Panel className={"p-3"} value="1">
+            اول: لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
           </Tabs.Panel>
-          <Tabs.Panel className={"p-3"} value="projects">
-            ProjectIcon
+          <Tabs.Panel className={"p-3"} value="2">
+            دوم: لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
           </Tabs.Panel>
-          <Tabs.Panel className={"p-3"} value="account">
-            PersonIcon
+          <Tabs.Panel className={"p-3"} value="3">
+            سوم: لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
           </Tabs.Panel>
         </Tabs.Root>
       </div>
@@ -481,15 +481,17 @@ function Page() {
           <InputField id="input-2" type="text" />
         </Input>
 
-        <Otp className="otp mt-6" dir="ltr">
-          <Otp.Inputs
-            length={6}
-            className="input input-outline input-square"
-            onLastChange={(otp) => alert(otp)}
-          />
+        <div className="f-align mt-6">
+          <Otp className="otp" dir="ltr">
+            <Otp.Inputs
+              length={6}
+              className="input input-outline input-square"
+              onLastChange={(otp) => alert(otp)}
+            />
 
-          <Otp.HiddenInput />
-        </Otp>
+            <Otp.HiddenInput />
+          </Otp>
+        </div>
       </div>
 
       <div className="p-3 mt-9">
@@ -618,8 +620,8 @@ function Page() {
 
       <div className="p-3 mt-9">
         <p className="text-5xl font-bold">استپ:</p>
-        <PaginationWithState className="mt-6" pages={PAGES_WITH_STATE}>
-          <div className="f-center gap-3">
+        <PaginationWithState className="max-w-5xl mt-6" pages={PAGES_WITH_STATE}>
+          <div className="f-center mb-3 gap-3">
             <PaginationWithState.Counts
               className="btn data-[skipped=false]:btn-soft btn-square btn-rounded data-[skipped=true]:btn-fill data-[skipped=true]:palette-primary"
               progressElement={<div className="w-32 f-center gap-1.5 group">

@@ -17,6 +17,24 @@
 @import "./../styles/toast.css";
 @import "./../styles/pagination.css";
 
+@font-face {
+  font-family: "ravi-medium";
+  font-display: swap;
+  src: url("/fonts/ravi/ravi-medium.woff");
+}
+
+@font-face {
+  font-family: "ravi-bold";
+  font-display: swap;
+  src: url("/fonts/ravi/ravi-bold.woff");
+}
+
+@font-face {
+  font-family: "ravi-black";
+  font-display: swap;
+  src: url("/fonts/ravi/ravi-black.woff");
+}
+
 @theme {
   --color-background: #f1f1f1;
   --color-background-thin: #ffffff;
@@ -46,6 +64,11 @@
   --radius-xl: calc(var(--spacing) * 4);
   --radius-2xl: calc(var(--spacing) * 5);
   --radius-3xl: calc(var(--spacing) * 6);
+
+  --font-*: initial;
+  --font-ravi-medium: "ravi-medium";
+  --font-ravi-bold: "ravi-bold";
+  --font-ravi-black: "ravi-black";
 }
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
@@ -111,23 +134,23 @@
 }
 
 @layer base {
-  body {
-    position: relative;
-  }
+  * {
+    @apply select-none;
 
-  .root {
-    isolation: isolate;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--color-foreground)) transparent;
   }
 
   html {
     @apply scroll-smooth bg-background text-foreground;
   }
 
-  * {
-    @apply select-none;
+  body {
+    @apply font-ravi-medium relative;
+  }
 
-    scrollbar-width: thin;
-    scrollbar-color: hsl(var(--color-foreground)) transparent;
+  .root {
+    @apply isolate;
   }
 
   a,
